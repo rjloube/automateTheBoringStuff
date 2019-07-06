@@ -17,6 +17,14 @@ def collatz(number):
         return(3 * number + 1)
 
 print('Give me a number: ')
-n = int(input())
+
+while True:
+    try:
+        n = int(input())
+        break
+    except ValueError:
+        print('Please enter integers only.')
+        continue
+    
 while n != 1:
     n = collatz(n)
