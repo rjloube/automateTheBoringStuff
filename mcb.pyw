@@ -1,5 +1,5 @@
 #! python3
-# multiClipboard.pyw - Saves and loads pieces of text to the clipboard.
+# mcb.pyw (multi-clipboard) - Saves and loads pieces of text to the clipboard.
 # Usage: py.exe mcb.pyw save <keyword> - Saves clipboard to keyword.
 #        py.exe mcb.pyw <keyword> - Loads keyword to the clipboard.
 #        py.exe mcb.pyw list - Loads all keywords to the clipboard.
@@ -22,7 +22,7 @@ elif len(sys.argv) == 2:
 if len(sys.argv) == 3 and sys.argv[1].lower()== 'delete':
     del(mcbShelf[sys.argv[2]])
 
-# TODO: add command to delete all keywords
+# Add command to delete all keywords
 if len(sys.argv) == 2 and sys.argv[1].lower()== 'clear':
     mcbShelf.clear()
 
